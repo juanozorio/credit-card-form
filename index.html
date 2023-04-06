@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Cartão de Crédito</title>
+</head>
+<body>
+    <form action="">
+        <section id="credit-card">
+            <div class="front"></div>
+            <div class="back"></div>
+        </section>
+        <section class="inputs flex">
+            <div class="input-wrapper">
+                <label for="cc-number">Número do cartão</label>
+                <input 
+                    id="cc-number"
+                    placeholder="**** **** **** ****"        
+                    type="text"
+                >
+            </div>
+            <div class="input-wrapper">
+                <label for="cc-holder">Nome do titular</label>
+                <input 
+                    id="cc-holder"
+                    type="text"
+                    placeholder="Nome como está no cartão"
+                    required
+                >
+                <div class="warning">
+                    <img
+                        src="assets/warningIcon.svg" 
+                        alt="Ícone de alerta"
+                    >
+                    Nome de titular é obrigatório
+                </div>
+            </div>
+            <div class="col-2 flex">
+                <div class="input-wrapper">
+                    <label for="cc-validity">Validade</label>
+                    <input 
+                        id="cc-validity"
+                        type="text"
+                        placeholder="mm/aa"
+                    >
+                </div>
+
+                <div class="input-wrapper">
+                    <label class="flex help" for="cc-cvv">
+                        CVV
+                        <img 
+                            src="assets/helpIcon.svg"
+                            alt="Ícone de ajuda"
+                            title="Esse número está geralmente, nas costas do seu cartão"
+                        >
+                    </label>
+                    <input 
+                        id="cc-cvv"
+                        type="text"
+                        placeholder="***"
+                    >
+                </div>
+            </div>
+        </section>
+        <section class="info-security flex">
+            <img src="assets/shieldCheck.svg" alt="Ícone de segurança">
+            Seus dados estão seguros
+        </section>
+        <button>Adicionar Cartão</button>
+    </form>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
